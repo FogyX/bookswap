@@ -41,6 +41,7 @@ class AdminController extends Controller
         $card = BookCard::find($id);
         $card->status_id = Status::find(3)->id;
         $card->save();
+
         return redirect()->back()->with('success', 'Карточка отклонена.');
     }
 }
